@@ -27,7 +27,7 @@ const {
 
 console.log(chalk.bold("Authorize by visiting this URL:\n"), chalk.underline(url));
 
-app.listen(8080);
+app.listen(process.env.PORT);
 app.get("/", async (req, res) => {
 	const state = req.query.state?.toString();
 	const code = req.query.code?.toString();
